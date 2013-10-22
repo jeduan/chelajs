@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block head %}
+	{% parent %}
+{% endblock %}
+
+{% block content %}
+
+	{% if user %}
+		<p>Bienvenidos {{ user.username }}.</p>
+		<p>Este sitio apenas esta empezando y necesitamos tu ayuda. Checa <a href="https://github.com/Siedrix/chelajs">https://github.com/Siedrix/chelajs</a> para ayudar con alguna de las siguientes tareas</p>
+		<ul>
+			<li>Ayuda creando un modelo usuario.</li>
+			<li>Ayuda creando un modelo evento.</li>
+			<li>Haz que cuando el usuario haga log in tengamos su informacion en el modelo.</li>
+			<li>Agrega una forma para crear eventos</li>
+			<li>Agrega una forma para enviar platicas</li>
+			<li>Agrega una forma para registrarte al evento</li>
+			<li>Genera pruebas de todo lo anterior</li>
+			<li>Crear un logo de ChelaJs</li>
+			<li>Ayuda con diseno para el sitio</li>
+		</ul>
+
+		<p>Para mas informacion contacta a <a href="https://github.com/siedrix">@Siedrix</a> y <a href="https://github.com/jeduan">@Jeduan</a></p>
+	{% else %}
+		<p>Bienvenidos a ChelaJs <a href="/auth/github">Haz log in with github</a>.</p>
+	{% endif %}
+
+{% endblock %}
