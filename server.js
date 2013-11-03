@@ -16,6 +16,8 @@ server.set('view engine', 'html');
 server.set('views', __dirname + '/app/views');
 server.set('view cache', false);
 
+server.use(express.static('./public'));
+
 // Server config
 server.configure(function() {
 	server.use(express.logger());
@@ -46,6 +48,11 @@ server.get('/', function (req, res) {
 	});
 });
 
+server.get('/log-out', function (req, res) {
+	req.session.destroy();
+
+	res.redirect('/');
+});
 // Connections
 var githubConnection = require('./app/connections/github');
 githubConnection(server);

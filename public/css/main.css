@@ -1,0 +1,7 @@
+.navbar .navbar-brand{color:#fff}
+.navbar .navbar-text{color:#fff;}
+.navbar .navbar-text .avatar{height:25px}
+.navbar .navbar-text .log-out{color:#fff;}
+.navbar .navbar-text .log-out:hover{color:#b3b3b3;text-decoration:none}
+.jumbotron{padding-top:54px}
+.footer{background-color:#101010;color:#fff}
