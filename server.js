@@ -3,6 +3,7 @@ var express = require('express.io'),
 	passport = require('passport');
 
 var LevelStore = require('connect-level')(express);
+var db = require('./lib/db');
 
 var server = express();
 
@@ -53,8 +54,13 @@ server.get('/log-out', function (req, res) {
 
 	res.redirect('/');
 });
+
 // Connections
 var githubConnection = require('./app/connections/github');
 githubConnection(server);
+
+// Controllers
+var adminController = require('./app/controllers/admin');
+adminController(server);
 
 server.listen(3000);

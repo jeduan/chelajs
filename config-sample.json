@@ -3,5 +3,6 @@
 		"clientID" : "",
 		"clientSecret" : "",
 		"callbackURL" : "http://chelajs-dev.com:3000/auth/github/callback"
-	}
+	},
+	"admin" : []
 }

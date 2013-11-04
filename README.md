@@ -6,14 +6,20 @@ Running ChelaJs repo
 
 ChelaJs uses LevelDb as Database and session store, so no extra dependencies are needed, just node modules.
 
-### Setting Github keys
-
-Chela Js uses github as log in, we are developers after all.
+## Conf file
 
 Copy sample config to config folder and add a github keys to sample
 
 	mkdir config
 	cp config-sample.json config/dev.json
+
+### Set your self as admin
+
+Go to dev.json and set you github username in the admin array
+
+### Setting Github keys
+
+Chela Js uses github as log in, we are developers after all.
 
 Create your github keys [here](https://github.com/settings/applications/new)
 

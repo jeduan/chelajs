@@ -27,7 +27,7 @@
 				{% if user %}
 				<div class="navbar-right">
 					<p class="navbar-text">
-						<img class="avatar" src="{{ user._json.avatar_url }}">
+						<img class="avatar" src="{{ user.data.avatar_url }}">
 						<span>{{ user.username }}</span>
 						<span>|</span>
 						<span><a class="log-out" href="/log-out">Log out <i class="fa fa-caret-square-o-right"></i></a></span>

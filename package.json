@@ -13,7 +13,9 @@
     "passport": "~0.1.17",
     "passport-github": "~0.1.5",
     "swig": "~1.1.0",
-    "connect-level": "0.0.4"
+    "connect-level": "0.0.4",
+    "level-sublevel": "~5.1.1",
+    "underscore": "~1.5.2"
   },
   "scripts": {
     "start": "node server.js"
