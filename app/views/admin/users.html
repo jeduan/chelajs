@@ -1,0 +1,27 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block head %}
+	{% parent %}
+
+	<link rel="stylesheet" href="/css/admin.css">
+{% endblock %}
+
+{% block content %}
+	<div class="main">
+		<div class="container">
+			{% for user in users %}
+			<div class="row list">
+				<div class="col-md-3">
+					<img class="avatar" src="{{ user.data.avatar_url }}">
+					<span>{{ user.username }}</span>
+				</div>
+				<div class="col-md-7">
+					{{ user.emails[0].value }}
+				</div>				
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
